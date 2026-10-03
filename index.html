@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snails and Sandals</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-icon">🐌</div>
+          <div>
+            <p class="eyebrow">Cartoon arena adventure</p>
+            <h1>Snails and Sandals</h1>
+          </div>
+        </div>
+        <div class="status-badges">
+          <span id="level-badge">Arena 1</span>
+          <span id="gold-badge">Gold: 0</span>
+        </div>
+      </header>
+
+      <main>
+        <section id="menu-screen" class="screen active">
+          <div class="panel intro-panel">
+            <h2>Válassz csigahőst</h2>
+            <p>
+              A sivatagban a csigák arénája megnyílt. Válaszd ki a harcost,
+              lépj be a körök közé, és győzd le a szörnyes arénákat.
+            </p>
+            <div id="class-list" class="class-list"></div>
+            <button id="start-button" class="primary-btn">Kezdjük</button>
+          </div>
+        </section>
+
+        <section id="battle-screen" class="screen">
+          <div class="battlefield panel">
+            <div class="fighter player-side">
+              <div class="fighter-visual player-visual">
+                <div class="snail">
+                  <div class="shell"></div>
+                  <div class="body"></div>
+                  <div class="head"></div>
+                  <div class="eye eye-left"></div>
+                  <div class="eye eye-right"></div>
+                  <div class="antenna antenna-left"></div>
+                  <div class="antenna antenna-right"></div>
+                </div>
+              </div>
+              <div id="player-panel" class="fighter-panel"></div>
+            </div>
+
+            <div class="versus-wrap">
+              <div class="versus-badge">VS</div>
+            </div>
+
+            <div class="fighter enemy-side">
+              <div class="fighter-visual enemy-visual">
+                <div class="snail enemy-snail">
+                  <div class="shell enemy-shell"></div>
+                  <div class="body enemy-body"></div>
+                  <div class="head enemy-head"></div>
+                  <div class="eye eye-left"></div>
+                  <div class="eye eye-right"></div>
+                  <div class="antenna antenna-left"></div>
+                  <div class="antenna antenna-right"></div>
+                </div>
+              </div>
+              <div id="enemy-panel" class="fighter-panel"></div>
+            </div>
+          </div>
+
+          <div class="action-strip panel">
+            <button class="action-btn" data-action="attack">Támadás</button>
+            <button class="action-btn" data-action="skill">Képesség</button>
+            <button class="action-btn" data-action="guard">Védekezés</button>
+            <button class="action-btn" data-action="heal">Gyógyítás</button>
+          </div>
+
+          <div class="log panel">
+            <h3>Harci napló</h3>
+            <div id="battle-log" class="battle-log"></div>
+          </div>
+        </section>
+
+        <section id="result-screen" class="screen">
+          <div class="panel result-panel">
+            <h2 id="result-title">Győzelem!</h2>
+            <p id="result-message"></p>
+            <button id="continue-button" class="primary-btn">Folytatás</button>
+            <button id="restart-button" class="secondary-btn">Új játék</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
